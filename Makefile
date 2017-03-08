@@ -17,7 +17,16 @@ ASM	= nasm -f elf64
 
 MKDIR	= mkdir -p
 
-SRC	= srcs/strlen.S
+SRC	= srcs/strlen.S \
+	srcs/strchr.S \
+	srcs/strcmp.S \
+	srcs/strncmp.S \
+	srcs/memset.S \
+	srcs/memmove.S \
+	srcs/memcpy.S \
+	srcs/strcasecmp.S \
+	srcs/rindex.S \
+	srcs/strstr.S
 
 SRCDIR	= srcs
 

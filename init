@@ -1,0 +1,11 @@
+make
+gcc -c main.c
+echo "main.o created"
+gcc -o test main.o objs/*
+echo "test created"
+rm main.o
+echo "main.o deleted"
+make fclean
+./test
+rm test
+echo "test deleted"
