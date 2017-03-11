@@ -20,6 +20,11 @@ int	main(void)
   char  s1[] = "STRING";
   char	s2[] = "strint";
   int	result;
+  char	str5[] = "This is a simple string";
+  char	key2[] = "aeiou";
+  char	str6[] = "fcba73";
+  char	keys[] = "1234567890";
+  int	i;
 
   /* strlen test */
 
@@ -86,9 +91,25 @@ int	main(void)
 
   /* strstr test */
 
-  pch = strstr(str, "simple");
+  pch = strstr(str5, "simple");
   strncpy(pch, "sample", 6);
-  printf("%s\n", str);
+  printf("%s\n", str5);
+
+  /* strpbrk test */
+
+  printf("Vowels in '%s': ", str);
+  pch = strpbrk(str, key2);
+  while (pch != NULL)
+    {
+      printf("%c ", *pch);
+      pch = strpbrk(pch + 1, key2);
+    }
+  printf("\n");
+
+  /* strcspn test */
+
+  i = strcspn(str6, keys);
+  printf("The first number in str is at position %d.\n", i + 1);
 
   return (0);
 }

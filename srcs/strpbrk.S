@@ -2,33 +2,27 @@ BITS 64
 
 SECTION .text
 
-GLOBAL strstr
+GLOBAL strpbrk
 
-strstr:
+strpbrk:
 while:
 	cmp byte [rdi], 0
 	je nul
-	mov rax, rdi
 	mov rcx, rsi
 while_:
 	cmp byte [rsi], 0
 	je wend
-	cmp byte [rdi], 0
-	je wend
 	mov dl, byte [rdi]
 	cmp byte [rsi], dl
-	jne wend
-	inc rdi
+	je end
 	inc rsi
 	jmp while_
 wend:
-	cmp byte [rsi], 0
-	je end
 	mov rsi, rcx
-	mov rdi, rax
 	inc rdi
 	jmp while
 end:
+	mov rax, rdi
 	ret
 nul:
 	xor rax, rax
