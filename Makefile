@@ -19,13 +19,13 @@ MKDIR	= mkdir -p
 
 SRC	= srcs/strlen.S \
 	srcs/strchr.S \
-	srcs/strcmp.S \
-	srcs/strncmp.S \
 	srcs/memset.S \
-	srcs/memmove.S \
-	srcs/memcpy.S \
-	srcs/strcasecmp.S \
 	srcs/rindex.S \
+	srcs/strcasecmp.S \
+	srcs/memcpy.S \
+	srcs/memmove.S \
+	srcs/strncmp.S \
+	srcs/strcmp.S \
 	srcs/strstr.S \
 	srcs/strpbrk.S \
 	srcs/strcspn.S

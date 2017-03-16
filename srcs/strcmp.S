@@ -19,9 +19,10 @@ while:
 	inc rsi
 	jmp while
 end:
+	xor rax, rax
 	mov bh, byte [rdi]
 	sub bh, byte [rsi]
-	mov rax, rbx
+	mov al, bh
 	ret
 
 null:
