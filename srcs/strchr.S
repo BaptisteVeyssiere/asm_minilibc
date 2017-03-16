@@ -5,6 +5,8 @@ SECTION .text
 GLOBAL strchr
 
 strchr:
+	cmp rdi, 0
+	je nul
 while:
 	cmp byte [rdi], 0
 	je nul

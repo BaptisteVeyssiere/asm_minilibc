@@ -29,7 +29,6 @@ int	main(void)
   /* strlen test */
 
   printf("%d\n", strlen("test"));
-  printf("%d\n", strlen(NULL));
 
   /* strchr test */
 
@@ -39,13 +38,11 @@ int	main(void)
       printf("found at %d\n", pch - str + 1);
       pch = strchr(pch + 1, 's');
     }
-  pch = strchr(NULL, 's');
 
   /* memset test */
 
   memset(str2, '-', 6);
   printf("%s\n", str2);
-  memset(NULL, '-', 6);
 
   /* memcpy test */
 

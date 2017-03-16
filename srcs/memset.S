@@ -5,6 +5,8 @@ SECTION .text
 GLOBAL memset
 
 memset:
+	cmp rdi, 0
+	je null
 	xor rcx, rcx
 	mov rax, rdi
 while:
@@ -15,4 +17,7 @@ while:
 	inc rcx
 	jmp while
 end:
+	ret
+null:
+	xor rax, rax
 	ret
