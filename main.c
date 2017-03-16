@@ -40,6 +40,8 @@ int	main(void)
       pch = strchr(pch + 1, 's');
     }
   pch = strchr(NULL, 's');
+  if (strchr(str, 0) != NULL)
+    printf("strchr OK\n");
 
   /* memset test */
 

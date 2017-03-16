@@ -9,7 +9,7 @@ strchr:
 	je nul
 while:
 	cmp byte [rdi], 0
-	je nul
+	je check
 	cmp [rdi], sil
 	je end
 	inc rdi
@@ -17,6 +17,9 @@ while:
 end:
 	mov rax, rdi
 	ret
+check:
+	cmp byte [rdi], sil
+	je end
 nul:
 	xor rax, rax
 	ret
