@@ -5,6 +5,11 @@ SECTION .text
 GLOBAL strstr
 
 strstr:
+	cmp rdi, 0
+	je nul
+	cmp rsi, 0
+	je nul
+	
 while:
 	cmp byte [rdi], 0
 	je nul

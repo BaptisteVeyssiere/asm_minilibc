@@ -5,6 +5,10 @@ SECTION .text
 GLOBAL strcmp
 
 strcmp:
+	cmp rdi, 0
+	je null
+	cmp rsi, 0
+	je null
 while:
 	cmp byte [rdi], 0
 	je end
@@ -18,4 +22,8 @@ end:
 	mov bh, byte [rdi]
 	sub bh, byte [rsi]
 	mov rax, rbx
+	ret
+
+null:
+	xor rax, rax
 	ret

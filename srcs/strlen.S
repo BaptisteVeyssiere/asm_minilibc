@@ -6,12 +6,14 @@ GLOBAL strlen
 
 strlen:
 	xor rax, rax
+	xor rcx, rcx
 	cmp rdi, 0
 	je end
 while:
-	cmp byte [rdi + rax], 0
+	cmp byte [rdi + rcx], 0
 	je end
-	inc rax
+	inc rcx
 	jmp while
 end:
+	mov rax, rcx
 	ret
