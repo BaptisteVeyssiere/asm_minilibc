@@ -5,6 +5,8 @@ SECTION .text
 GLOBAL strcasecmp
 
 strcasecmp:
+	xor r8, r8
+	xor r9, r9
 while:
 	cmp byte [rdi], 0
 	je end
@@ -32,6 +34,7 @@ lower_s:
 	jg lower_end
 	add r9b, 32
 end:
+	xor rbx, rbx
 	mov rbx, r8
 	sub rbx, r9
 	mov rax, rbx
