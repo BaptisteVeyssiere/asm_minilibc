@@ -7,6 +7,10 @@ GLOBAL memcpy
 memcpy:
 	xor rcx, rcx
 	mov rax, rdi
+	cmp rdi, 0
+	je end
+	cmp rsi, 0
+	je end
 while:
 	cmp rcx, rdx
 	je end

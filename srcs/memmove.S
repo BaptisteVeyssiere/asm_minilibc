@@ -6,6 +6,10 @@ GLOBAL memmove
 
 memmove:
 	mov rax, rdi
+	cmp rdi, 0
+	je end
+	cmp rsi, 0
+	je end
 	cmp rsi, rdi
 	je end
 	cmp rsi, rdi

@@ -6,6 +6,8 @@ GLOBAL rindex
 
 rindex:
 	mov rax, 0
+	cmp rdi, 0
+	je end
 	mov rdx, rdi
 while:
 	cmp byte [rdx], 0

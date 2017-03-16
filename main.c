@@ -29,7 +29,7 @@ int	main(void)
   /* strlen test */
 
   printf("%d\n", strlen("test"));
-  printf("%d\n", strlen(NULL));
+  strlen(NULL);
 
   /* strchr test */
 
@@ -53,6 +53,8 @@ int	main(void)
   person.age = 46;
   memcpy(&person_copy, &person, sizeof(person));
   printf("person_copy: %s %d \n", person_copy.name, person_copy.age);
+  memcpy(NULL, myname, strlen(myname) + 1);
+  memcpy(person.name, NULL, strlen(myname) + 1);
 
   /* strcmp test */
 
@@ -62,11 +64,15 @@ int	main(void)
     scanf("%79s", buffer);
   } while (strcmp(key, buffer) != 0);
   printf("Correct answer!\n");
+  strcmp(NULL, buffer);
+  strcmp(key, NULL);
 
   /* memmove test */
 
   memmove(str3 + 20, str3 + 15, 11);
   printf("%s\n", str3);
+  memmove(NULL, str3 + 15, 11);
+  memmove(str3 + 20, NULL, 11);
 
   /* strncmp test */
 
@@ -91,12 +97,20 @@ int	main(void)
 
   pch = rindex(str, 's');
   printf("Last occurence of 's' found at %d \n", pch - str + 1);
+  if (rindex(NULL, 's') == NULL)
+    printf("rindex OK\n");
+  if (rindex(NULL, 'z') == NULL)
+    printf("rindex 2 OK\n");
 
   /* strstr test */
 
   pch = strstr(str5, "simple");
   strncpy(pch, "sample", 6);
   printf("%s\n", str5);
+  if (strstr(NULL, "simple") == NULL)
+    printf("strstr OK\n");
+  if (strstr(str5, NULL) == NULL)
+    printf("strstr 2 OK\n");
 
   /* strpbrk test */
 
@@ -107,6 +121,12 @@ int	main(void)
       printf("%c ", *pch);
       pch = strpbrk(pch + 1, key2);
     }
+  if (strpbrk(NULL, key2) == NULL)
+    printf("strpbrk OK\n");
+  if (strpbrk(str, NULL) == NULL)
+    printf("strpbrk 2 OK\n");
+  if (strpbrk(str, "w") == NULL)
+    printf("strpbrk 3 OK\n");
   printf("\n");
 
   /* strcspn test */

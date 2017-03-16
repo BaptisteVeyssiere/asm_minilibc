@@ -6,6 +6,10 @@ GLOBAL strpbrk
 
 strpbrk:
 while:
+	cmp rdi, 0
+	je nul
+	cmp rsi, 0
+	je nul
 	cmp byte [rdi], 0
 	je nul
 	mov rcx, rsi
