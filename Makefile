@@ -21,11 +21,11 @@ SRC	= srcs/strlen.S \
 	srcs/strchr.S \
 	srcs/memset.S \
 	srcs/rindex.S \
+	srcs/strcmp.S \
 	srcs/strcasecmp.S \
 	srcs/memcpy.S \
 	srcs/memmove.S \
 	srcs/strncmp.S \
-	srcs/strcmp.S \
 	srcs/strstr.S \
 	srcs/strpbrk.S \
 	srcs/strcspn.S

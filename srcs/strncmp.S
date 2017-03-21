@@ -27,6 +27,9 @@ end:
 	mov bh, byte [rdi]
 	sub bh, byte [rsi]
 	mov al, bh
+	cbw
+	cwde
+	cdqe
 	ret
 null:
 	xor rax, rax

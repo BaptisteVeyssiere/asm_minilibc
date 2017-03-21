@@ -38,4 +38,7 @@ end:
 	mov rbx, r8
 	sub rbx, r9
 	mov rax, rbx
+	cbw
+	cwde
+	cdqe
 	ret
