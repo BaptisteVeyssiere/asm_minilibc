@@ -40,5 +40,4 @@ end:
 	mov rax, rbx
 	cbw
 	cwde
-	cdqe
 	ret

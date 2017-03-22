@@ -29,7 +29,6 @@ end:
 	mov al, bh
 	cbw
 	cwde
-	cdqe
 	ret
 null:
 	xor rax, rax
