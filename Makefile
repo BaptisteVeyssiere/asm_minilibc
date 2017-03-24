@@ -28,7 +28,9 @@ SRC	= srcs/strlen.S \
 	srcs/strncmp.S \
 	srcs/strstr.S \
 	srcs/strpbrk.S \
-	srcs/strcspn.S
+	srcs/strcspn.S \
+	srcs/write.S \
+	srcs/read.S
 
 SRCDIR	= srcs
 
