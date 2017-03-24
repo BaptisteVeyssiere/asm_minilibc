@@ -1,13 +1,3 @@
-/*
-** srcsf.c for srcsf in /home/wery_p/rendu/test/mouli_srcs
-**
-** Made by Paul WERY
-** Login   <wery_p@epitech.net>
-**
-** Started on  Sat Mar  4 19:42:57 2017 Paul WERY
-** Last update Sun Mar  5 19:55:20 2017 Paul WERY
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

@@ -9,7 +9,9 @@ strstr:
 	je nul
 	cmp rsi, 0
 	je nul
-
+	mov bh, byte [rsi]
+	cmp [rdi], bh
+	je zero_val
 while:
 	cmp byte [rdi], 0
 	je nul
@@ -37,4 +39,9 @@ end:
 	ret
 nul:
 	xor rax, rax
+	ret
+zero_val:
+	cmp byte [rdi], 0
+	jne while
+	mov rax, rdi
 	ret

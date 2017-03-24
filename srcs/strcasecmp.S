@@ -5,19 +5,23 @@ SECTION .text
 GLOBAL strcasecmp:function
 
 strcasecmp:
+	cmp rdi, 0
+	je null
+	cmp rsi, 0
+	je null
 	xor r8, r8
 	xor r9, r9
 while:
-	cmp byte [rdi], 0
-	je end
-	cmp byte [rsi], 0
-	je end
 	mov r8b, byte [rdi]
 	mov r9b, byte [rsi]
 	jmp lower
 lower_end:
 	cmp r8b, r9b
 	jne end
+	cmp byte [rdi], 0
+	je end
+	cmp byte [rsi], 0
+	je end
 	inc rdi
 	inc rsi
 	jmp while
@@ -40,4 +44,7 @@ end:
 	mov rax, rbx
 	cbw
 	cwde
+	ret
+null:
+	xor rax, rax
 	ret

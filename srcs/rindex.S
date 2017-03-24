@@ -5,7 +5,9 @@ SECTION .text
 GLOBAL rindex:function
 
 rindex:
-	mov rax, 0
+	cmp rdi, 0
+	je null
+	xor rax, rax
 	cmp rdi, 0
 	je end
 	mov rdx, rdi
@@ -21,4 +23,12 @@ ret_value:
 	mov rax, rdx
 	jmp end_ret
 end:
+	cmp byte [rdx], sil
+	je zero_val
+	ret
+null:
+	xor rax, rax
+	ret
+zero_val:
+	mov rax, rdx
 	ret

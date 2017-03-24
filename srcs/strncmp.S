@@ -9,6 +9,8 @@ strncmp:
 	je null
 	cmp rsi, 0
 	je null
+	cmp rdx, 0
+	je null
 	xor rcx, rcx
 while:
 	cmp byte [rdi], 0
