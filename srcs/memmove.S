@@ -15,8 +15,8 @@ memmove:
 greater:
 	cmp rdx, 0
 	je end
-	mov rbx, [rsi]
-	mov [rdi], rbx
+	mov bh, byte [rsi]
+	mov [rdi], bh
 	dec rdx
 	inc rdi
 	inc rsi
