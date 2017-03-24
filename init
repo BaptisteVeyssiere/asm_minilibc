@@ -1,11 +1,28 @@
 make
 gcc -c main.c
 echo "main.o created"
+gcc -c test.c
+echo "test.o created"
 gcc -o test main.o objs/*
 echo "test created"
+gcc -o test2 test.o objs/*
+echo "test2 created"
 rm main.o
+rm test.o
 echo "main.o deleted"
+echo "test.o deleted"
 make fclean
-./test
+./test 2> a1
 rm test
 echo "test deleted"
+./test2 2> a2
+rm test2
+echo "test2 deleted"
+gcc main.c
+./a.out 2> b1
+gcc test.c
+./a.out 2> b2
+rm a.out
+diff a1 b1
+diff a2 b2
+rm a1 a2 b1 b2

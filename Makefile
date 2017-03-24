@@ -11,7 +11,7 @@ NAME	= libasm.so
 
 RM	= rm -f
 
-CC	= gcc
+LD	= ld
 
 ASM	= nasm -f elf64
 
@@ -39,7 +39,7 @@ OBJDIR	= objs
 OBJ	= $(SRC:$(SRCDIR)/%.S=$(OBJDIR)/%.o)
 
 $(NAME): $(OBJ)
-	@$(CC) -shared -o $(NAME) $(OBJ)
+	@$(LD) -shared -o $(NAME) $(OBJ)
 	@echo "Linking complete!"
 
 $(OBJ): $(OBJDIR)/%.o : $(SRCDIR)/%.S
