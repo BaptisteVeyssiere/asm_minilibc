@@ -14,8 +14,8 @@ memcpy:
 while:
 	cmp rcx, rdx
 	je end
-	mov rbx, [rsi + rcx]
-	mov [rdi + rcx], rbx
+	mov bh, byte [rsi + rcx]
+	mov [rdi + rcx], bh
 	inc rcx
 	jmp while
 end:
