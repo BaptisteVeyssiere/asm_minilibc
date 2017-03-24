@@ -5,4 +5,5 @@ gcc objs/* a.o
 gcc a.c
 ./a.out "$1" "$2" 2> function.output
 diff student.output function.output
-rm student.output function.output a.out
+rm student.output function.output a.out a.o
+make fclean
