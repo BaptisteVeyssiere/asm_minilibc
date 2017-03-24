@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL memset
+GLOBAL memset:function
 
 memset:
 	cmp rdi, 0

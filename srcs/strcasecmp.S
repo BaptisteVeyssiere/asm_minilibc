@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL strcasecmp
+GLOBAL strcasecmp:function
 
 strcasecmp:
 	xor r8, r8

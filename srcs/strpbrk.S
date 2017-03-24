@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL strpbrk
+GLOBAL strpbrk:function
 
 strpbrk:
 while:

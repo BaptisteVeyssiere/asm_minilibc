@@ -2,14 +2,14 @@ BITS 64
 
 SECTION .text
 
-GLOBAL strstr
+GLOBAL strstr:function
 
 strstr:
 	cmp rdi, 0
 	je nul
 	cmp rsi, 0
 	je nul
-	
+
 while:
 	cmp byte [rdi], 0
 	je nul

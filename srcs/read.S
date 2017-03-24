@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL read
+GLOBAL read:function
 
 read:
 	mov rax, 0

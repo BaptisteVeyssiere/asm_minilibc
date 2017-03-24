@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL memcpy
+GLOBAL memcpy:function
 
 memcpy:
 	xor rcx, rcx

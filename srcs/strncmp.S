@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL strncmp
+GLOBAL strncmp:function
 
 strncmp:
 	cmp rdi, 0

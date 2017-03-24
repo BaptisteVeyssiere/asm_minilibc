@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL strcspn
+GLOBAL strcspn:function
 
 strcspn:
 	xor rcx, rcx

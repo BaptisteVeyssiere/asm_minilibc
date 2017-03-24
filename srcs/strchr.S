@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL strchr
+GLOBAL strchr:function
 
 strchr:
 	cmp rdi, 0

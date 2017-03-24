@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL memmove
+GLOBAL memmove:function
 
 memmove:
 	mov rax, rdi

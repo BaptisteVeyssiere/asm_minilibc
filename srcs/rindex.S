@@ -2,7 +2,7 @@ BITS 64
 
 SECTION .text
 
-GLOBAL rindex
+GLOBAL rindex:function
 
 rindex:
 	mov rax, 0
