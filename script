@@ -1,9 +1,0 @@
-gcc -c a.c
-make re
-gcc objs/* a.o
-./a.out "$1" "$2" 2> student.output
-gcc a.c
-./a.out "$1" "$2" 2> function.output
-diff student.output function.output
-rm student.output function.output a.out a.o
-make fclean
