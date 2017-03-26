@@ -27,13 +27,13 @@ lower_end:
 	jmp while
 lower:
 	cmp byte [rdi], 65
-	jle lower_s
+	jl lower_s
 	cmp byte [rdi], 90
 	jg lower_s
 	add r8b, 32
 lower_s:
 	cmp byte [rsi], 65
-	jle lower_end
+	jl lower_end
 	cmp byte [rsi], 90
 	jg lower_end
 	add r9b, 32
